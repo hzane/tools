@@ -1,0 +1,78 @@
+@import 'custom.css';
+
+html, body{margin: 0;padding: 0;font-family: sans-serif;}
+ul{
+list-style-type: none;
+padding-left: 15px;
+}
+/* *********************************************** */
+/* ***** SIDEBAR NAV ****** */
+/* *********************************************** */
+
+ul#sidebar{
+width:48%;
+padding:0;
+float: left;
+min-height: 100%;
+height: auto;
+}
+ul#sidebar li ul li ul{
+	/*display: none; */
+}
+ul.attributes{
+	/*display: none; */
+	border-top:1px solid #7F8C8D;
+	background: #eee;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+ul#sidebar li.folder a:hover,ul#sidebar li.folder a:hover{ 
+	cursor: pointer;
+	text-decoration: underline;
+	color: #123;
+}
+ul#sidebar li.folder a{ 
+	color: #123;
+}
+ul#sidebar li.file a{ 
+	color: #888;
+}
+ul#sidebar > li > ul > li{
+	padding:5px;
+}
+ul#sidebar > li > ul > li ul{
+	background: #fff;
+}
+ul#sidebar li ul li ul li ul li  { background-color:#ddd }
+ul#sidebar .row{
+	border-bottom:1px solid  #7F8C8D;
+}
+/* *********************************************** */
+/* ***** MAIN SECTION ****** */
+/* *********************************************** */
+
+section#main{
+width:50%;
+padding:0%;
+min-height: 100%;
+height: auto;
+float: left;
+color:#fef;
+background: #7F8C8D;
+position:fixed;
+overflow-y: auto;
+right:0;
+}
+section#main .row{
+	width: 99%;
+	border-bottom: 5px solid #ccc;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+section#main .attr-var{
+	background: #fff;
+	color:#000;
+	margin: 11px;
+}
+section#main .row span:nth-child(1){font-weight: 600}

@@ -1,0 +1,63 @@
+@import 'custom.css';
+
+html, body{margin: 0;padding: 0;font-family: sans-serif;}
+ul{
+  -webkit-padding-start: 25px;
+}
+/* *********************************************** */
+/* ***** SIDEBAR NAV ****** */
+/* *********************************************** */
+
+ul#sidebar{
+width:25%;
+float: left;
+}
+ul#sidebar{
+	display: block;
+}
+ul#sidebar li ul li ul{
+	display: none;
+}
+div.attributes{
+	display: none;
+}
+ul#sidebar li.folder a:hover,ul#sidebar li.folder a:hover{ 
+	cursor: pointer;
+	text-decoration: underline;
+	color: #123;
+}
+ul#sidebar li.folder a{ 
+	color: #123;
+}
+ul#sidebar li.file a{ 
+	color: #888;
+}
+
+
+/* *********************************************** */
+/* ***** MAIN SECTION ****** */
+/* *********************************************** */
+
+section#main{
+width:70%;
+height: 100%;
+float: left;
+color:#fef;
+background: #123
+}
+section#main .row:nth-child(1){
+	margin-top: 22px;
+}
+section#main .row{
+	width: 92%;
+	margin-left: auto;
+	margin-right: auto;
+}
+section#main .row span:nth-child(1){
+	font-weight: 500;
+}
+section#main .row span:nth-child(2){
+	font-weight: 200;
+	padding-left: 10px;
+	font-size: 16px;
+}

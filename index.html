@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="Nick Rios">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="http://code.jquery.com/jquery-1.11.0-beta2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+
+$.getJSON( "json/public.json", function( data ) {
+	console.log("ii");
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+
+
+  
+}, function(err){
+	console.log("err");
+console.log(err);
+});
+
+
+
+
+});
+</script>
+
+</body>
+</html>

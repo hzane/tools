@@ -1,0 +1,64 @@
+{
+		"controller(&#39;AppCtrl&#39;,":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[{"$scope": "Object"},{"$http": "Object"},],
+		"methods":[]	
+	}
+},
+{
+		"$scope.submit":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[],
+		"methods":[]	
+	}
+},
+{
+		"success(":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[{"data": "Object"},{"status": "Object"},{"headers": "Object"},{"config": "Object"},],
+		"methods":[]	
+	}
+},
+{
+		"error(":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[{"data": "Object"},{"status": "Object"},{"headers": "Object"},{"config": "Object"},],
+		"methods":[]	
+	}
+},
+{
+		"$scope.nickrios":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[],
+		"methods":[]	
+	}
+},
+{
+		"sufar":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[],
+		"methods":[]	
+	}
+},
+{
+		"howdydoodee":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[],
+		"methods":[]	
+	}
+},
+{
+		"money":{
+		"extends": "",
+		"constructor":"",
+		"arguments":[{"vars": "Object"},],
+		"methods":["fun":[])]	
+	}
+},
