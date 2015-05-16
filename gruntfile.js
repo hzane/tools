@@ -10,9 +10,9 @@ to create html
 	pkg:grunt.file.readJSON('package.json')
 	});
 
-  grunt.loadTasks('tasks/build');
+  grunt.loadTasks('tasks');
  // grunt.loadTasks('tasks/build');
 //  grunt.loadNpmTasks('grunt-contrib-uglify');
   //grunt.loadNpmTasks('grunt-exec');
-	grunt.registerTask('default', ['build']);
+	grunt.registerTask('default', ['scan']);
 }

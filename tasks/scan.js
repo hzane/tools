@@ -4,16 +4,34 @@ var fs = require('fs'),
     path = require('path')
 var UglifyJS = require("uglify-js");
 
-var Deep = require("../../node_modules/deep-js/lib/deep.js");
-var renderer = require("../../node_modules/deep-js/lib/render.js");
+var Deep = require("../node_modules/deep-js/lib/deep.js");
+var renderer = require("../node_modules/deep-js/lib/render.js");
 var async = require('async');
-var acorn = require('acorn-jsx');
+var acorn = require('acorn');
 
-var scanDir = 'public';
+var scanDir = 'public/js/controllers.js';
 var saveFilePath = 'output/db.json';
 var ignoreList = ["node_modules", "public/js/lib/angular"];
 
-function 
+function getAcornVars(filename, callback){
+
+
+    fs.readFile(filename, 'utf8', function (err,data) {
+      if (err) {return console.log(err);}
+      var ast = acorn.parse(data);
+      for(var i in ast){
+
+        console.log(JSON.stringify(ast[i]));
+        console.log("--------------------------------------------------------");
+
+      }
+
+      callback();
+
+    });
+
+
+}
 
 function getDeepVars(filename){
     deep = new Deep(filename);
@@ -46,7 +64,8 @@ function dirTree(filename) {
         info.filesize = stats["size"];
 
         if(ext==='js'){
-            info.vars = getDeepVars(filename);
+            info.vars = getAcornVars(filename);
+            console.log(info.vars);
             info.notes = '';
             info.todo = '';
             info.contributors = [];
@@ -70,7 +89,9 @@ module.exports = function(grunt){
 
     grunt.registerTask('scan', function(){
     var done = this.async();
+getAcornVars(scanDir, done);
 
+/*
 async.waterfall([
     function(callback) {
         var res = dirTree(scanDir, writeResult);
@@ -84,6 +105,7 @@ async.waterfall([
     console.log(res);
     done();
 });
+*/
 
 
 

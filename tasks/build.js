@@ -6,7 +6,7 @@ var fs = require('fs'),
 var UglifyJS = require("uglify-js");
 var JSON2 = require('JSON2');
 
-var tree = require('../../output/db.json');
+var tree = require('../output/db.json');
 
 module.exports = function(grunt){
     grunt.registerTask('build', function(){
